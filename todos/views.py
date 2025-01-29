@@ -8,5 +8,9 @@ from .serializers import TodoSerializer
 class ListTodo(generics.ListAPIView):
     queryset = todos.objects.all()
     serializer_class = TodoSerializer
+
+class DetailTodo(generics.RetrieveAPIView):
+    queryset = todos.objects.all()
+    serializer_class = TodoSerializer   
     
     
